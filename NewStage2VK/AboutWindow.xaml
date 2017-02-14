@@ -1,0 +1,32 @@
+﻿<Window x:Class="NewStage2VK.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="О программе" Height="250" Width="400" WindowStartupLocation="CenterOwner" FontSize="14" KeyUp="Window_KeyUp" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>                
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="Red" >Рассылка приглашений в ВК</Label>
+            <Label Grid.Row="1" Grid.Column="0">Разработчик:</Label>
+            <Label Grid.Row="1" Grid.Column="1">Ильяшенко Станислав</Label>
+            <Label Grid.Row="2" Grid.Column="0">E-mail:</Label>
+            <Label Grid.Row="2" Grid.Column="1">sv256@yandex.ru</Label>
+            <Label Grid.Row="3" Grid.Column="0">Справка:</Label>
+            <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
+                <Hyperlink Click="Hyperlink_Click" NavigateUri="http://vector-sol.ru/Blog/7">
+                    <TextBlock Text="http://vector-sol.ru/Blog/7" />
+                </Hyperlink>
+            </TextBlock>
+            <Button x:Name="btnClose" Margin="6" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" MinWidth="70" Click="btnClose_Click">Закрыть</Button>
+        </Grid>
+    </Grid>
+</Window>

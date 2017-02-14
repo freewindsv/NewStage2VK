@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewStage2VK", "NewStage2VK\NewStage2VK.csproj", "{5C677256-5FB5-433D-8D2F-3857D16B75A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{94D9FA13-75E5-4E74-A26E-EA7F6BBCAC44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F85EFB91-18C1-4A8F-A6D6-AE4F9B178A0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C677256-5FB5-433D-8D2F-3857D16B75A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C677256-5FB5-433D-8D2F-3857D16B75A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C677256-5FB5-433D-8D2F-3857D16B75A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C677256-5FB5-433D-8D2F-3857D16B75A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D9FA13-75E5-4E74-A26E-EA7F6BBCAC44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D9FA13-75E5-4E74-A26E-EA7F6BBCAC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D9FA13-75E5-4E74-A26E-EA7F6BBCAC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D9FA13-75E5-4E74-A26E-EA7F6BBCAC44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85EFB91-18C1-4A8F-A6D6-AE4F9B178A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85EFB91-18C1-4A8F-A6D6-AE4F9B178A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85EFB91-18C1-4A8F-A6D6-AE4F9B178A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85EFB91-18C1-4A8F-A6D6-AE4F9B178A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F85EFB91-18C1-4A8F-A6D6-AE4F9B178A0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewStage2VK.DataAccess</RootNamespace>
+    <AssemblyName>NewStage2VK.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="DataModel\Event.cs" />
+    <Compile Include="DataModel\EventMessage.cs" />
+    <Compile Include="DataModel\IDbEntity.cs" />
+    <Compile Include="DataModel\IProfileReferencable.cs" />
+    <Compile Include="DataModel\IProfileSandable.cs" />
+    <Compile Include="DataModel\IVkEntity.cs" />
+    <Compile Include="DataModel\Message.cs" />
+    <Compile Include="DataModel\MissingDllHack.cs" />
+    <Compile Include="DataModel\NewStage2DbContext.cs" />
+    <Compile Include="DataModel\PresenceType.cs" />
+    <Compile Include="DataModel\Profile.cs" />
+    <Compile Include="DataModel\ProfileMessage.cs" />
+    <Compile Include="DataModel\Settings.cs" />
+    <Compile Include="DataModel\User.cs" />
+    <Compile Include="IDataAccess.cs" />
+    <Compile Include="LocalDb.cs" />
+    <Compile Include="Migrations\201701060550301_InitialCreate.cs" />
+    <Compile Include="Migrations\201701060550301_InitialCreate.Designer.cs">
+      <DependentUpon>201701060550301_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701071450425_WasSent_VkIdUnique.cs" />
+    <Compile Include="Migrations\201701071450425_WasSent_VkIdUnique.Designer.cs">
+      <DependentUpon>201701071450425_WasSent_VkIdUnique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701071940490_AddFieldProfileType.cs" />
+    <Compile Include="Migrations\201701071940490_AddFieldProfileType.Designer.cs">
+      <DependentUpon>201701071940490_AddFieldProfileType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701080525079_AddFieldProfileSex.cs" />
+    <Compile Include="Migrations\201701080525079_AddFieldProfileSex.Designer.cs">
+      <DependentUpon>201701080525079_AddFieldProfileSex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701091202420_AddProfileMessage.cs" />
+    <Compile Include="Migrations\201701091202420_AddProfileMessage.Designer.cs">
+      <DependentUpon>201701091202420_AddProfileMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701091342368_AddFieldAllowPrivateMessages.cs" />
+    <Compile Include="Migrations\201701091342368_AddFieldAllowPrivateMessages.Designer.cs">
+      <DependentUpon>201701091342368_AddFieldAllowPrivateMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701121728093_DateTimeFieldsFixing.cs" />
+    <Compile Include="Migrations\201701121728093_DateTimeFieldsFixing.Designer.cs">
+      <DependentUpon>201701121728093_DateTimeFieldsFixing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701161628043_AddFieldsIsFriendIsMember.cs" />
+    <Compile Include="Migrations\201701161628043_AddFieldsIsFriendIsMember.Designer.cs">
+      <DependentUpon>201701161628043_AddFieldsIsFriendIsMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701161908417_AddFieldPresenceType.cs" />
+    <Compile Include="Migrations\201701161908417_AddFieldPresenceType.Designer.cs">
+      <DependentUpon>201701161908417_AddFieldPresenceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702130523349_NonUniqueVkIdEventMessage.cs" />
+    <Compile Include="Migrations\201702130523349_NonUniqueVkIdEventMessage.Designer.cs">
+      <DependentUpon>201702130523349_NonUniqueVkIdEventMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Abstract\IEventMessageRepository.cs" />
+    <Compile Include="Repository\Abstract\IEventRepository.cs" />
+    <Compile Include="Repository\Abstract\IMessageRepository.cs" />
+    <Compile Include="Repository\Abstract\IRepository.cs" />
+    <Compile Include="Repository\Abstract\ISettingsRepository.cs" />
+    <Compile Include="Repository\Abstract\IVkRepository.cs" />
+    <Compile Include="Repository\Abstract\IProfileMessageRepository.cs" />
+    <Compile Include="Repository\EventRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\SettingsRepository.cs" />
+    <Compile Include="Repository\VkRepository.cs" />
+    <Compile Include="Repository\EventMessageRepository.cs" />
+    <Compile Include="Repository\ProfileMessageRepository.cs" />
+    <Compile Include="Repository\MessageRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701060550301_InitialCreate.resx">
+      <DependentUpon>201701060550301_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701071450425_WasSent_VkIdUnique.resx">
+      <DependentUpon>201701071450425_WasSent_VkIdUnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701071940490_AddFieldProfileType.resx">
+      <DependentUpon>201701071940490_AddFieldProfileType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701080525079_AddFieldProfileSex.resx">
+      <DependentUpon>201701080525079_AddFieldProfileSex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701091202420_AddProfileMessage.resx">
+      <DependentUpon>201701091202420_AddProfileMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701091342368_AddFieldAllowPrivateMessages.resx">
+      <DependentUpon>201701091342368_AddFieldAllowPrivateMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701121728093_DateTimeFieldsFixing.resx">
+      <DependentUpon>201701121728093_DateTimeFieldsFixing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161628043_AddFieldsIsFriendIsMember.resx">
+      <DependentUpon>201701161628043_AddFieldsIsFriendIsMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161908417_AddFieldPresenceType.resx">
+      <DependentUpon>201701161908417_AddFieldPresenceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702130523349_NonUniqueVkIdEventMessage.resx">
+      <DependentUpon>201702130523349_NonUniqueVkIdEventMessage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
