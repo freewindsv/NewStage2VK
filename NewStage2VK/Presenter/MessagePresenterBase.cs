@@ -57,13 +57,13 @@ namespace NewStage2VK.Presenter
         #region Abstract / Virtual members
 
         /// <summary>
-        /// Вернуть текст, который отображается в стаусной строке при загрузке данных
+        /// Вернуть текст, который отображается в статусной строке при загрузке данных
         /// </summary>
         /// <returns>Текст для отображение в статусе</returns>
         protected abstract string GetLoadingText();
 
         /// <summary>
-        /// Вернуть текст, который отображается в стаусной строке после окончания загрузки данных
+        /// Вернуть текст, который отображается в статусной строке после окончания загрузки данных
         /// </summary>
         /// <param name="list">Спсиок объектов данных</param>
         /// <returns>Текст статусной строки</returns>
@@ -101,7 +101,7 @@ namespace NewStage2VK.Presenter
         /// Получить идентификатор сущности в ВК
         /// </summary>
         /// <param name="item">Объект данных рассылки</param>
-        /// <returns></returns>
+        /// <returns>Идентификатор ВК</returns>
         protected abstract int GetVkId(T item);
 
         /// <summary>
